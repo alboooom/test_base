@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>notebooks</title>
+</head>
+<body>
+    <section>
+        <h1> Список ноутбуков </h1>
+    </section>
+    {% for price in prices %}
+        {% for notebook in notebooks %}
+
+            {% if price == 100000 and notebook == 'macbook pro 13' %}
+                <a href = "{{ url_for('about_notebook_pro13')}}"> {{notebook}} <br> </a>
+            {% endif %}
+            {% if price == 150000 and notebook == 'macbook pro 15' %}
+                <a href = "{{ url_for('about_notebook_pro15')}}"> {{notebook}} <br> </a>
+            {% endif %}
+            {% if price == 70000 and notebook == 'macbook air 13' %}
+                <a href = "{{ url_for('about_notebook_air13')}}"> {{notebook}} <br> </a>
+            {% endif %}
+            {% if price == 100000 and notebook == 'macbook 12' %}
+                <a href = "{{ url_for('about_notebook_12')}}"> {{notebook}} <br> </a>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>
