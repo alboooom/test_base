@@ -30,10 +30,10 @@ def list_notebooks():
     conn.close()
 @app.route('/notebook_pro_13')
 def about_notebook_pro13():
-    return 'pro13'
+    return render_template('pro13.html')
 @app.route('/notebook_pro_15')
 def about_notebook_pro15():
-    return 'pro15'
+    return 'pro 15'
 @app.route('/notebook_air_13')
 def about_notebook_air13():
     return 'air13'

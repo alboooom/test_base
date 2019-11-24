@@ -10,17 +10,18 @@ def isint(s):
         return False
 cursor.execute('SELECT name, price FROM product')
 name_price = cursor.fetchall()
-name_price = sum(name_price,())
-name_price = list(name_price)
-name = []
-prices = []
-for value in name_price:
-    if isint(value) :
-        prices.append(value)
-    else :
-        name.append(value)
-for n, row in enumerate(name):
-    name[n] = row.replace('\n','')
+# name_price = sum(name_price,())
+# name_price = list(name_price)
+# name = []
+# prices = []
+# for value in name_price:
+#     if isint(value) :
+#         prices.append(value)
+#     else :
+#         name.append(value)
+# for n, row in enumerate(name):
+#     name[n] = row.replace('\n','')
 
-print(name)
-print(prices)
+
+print(name_price)
+# print(prices)
