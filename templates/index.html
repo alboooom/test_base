@@ -8,22 +8,26 @@
     <section>
         <h1> Список ноутбуков </h1>
     </section>
-    {% for price in prices %}
-        {% for notebook in notebooks %}
+     <nav>
+        <ul>
+            {% for price in prices %}
+                {% for notebook in notebooks %}
 
-            {% if price == 100000 and notebook == 'macbook pro 13' %}
-                <a href = "{{ url_for('about_notebook_pro13')}}"> {{notebook}} <br> </a>
-            {% endif %}
-            {% if price == 150000 and notebook == 'macbook pro 15' %}
-                <a href = "{{ url_for('about_notebook_pro15')}}"> {{notebook}} <br> </a>
-            {% endif %}
-            {% if price == 70000 and notebook == 'macbook air 13' %}
-                <a href = "{{ url_for('about_notebook_air13')}}"> {{notebook}} <br> </a>
-            {% endif %}
-            {% if price == 100000 and notebook == 'macbook 12' %}
-                <a href = "{{ url_for('about_notebook_12')}}"> {{notebook}} <br> </a>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-</body>
+                    {% if price == 100000 and notebook == 'macbook pro 13' %}
+                        <li><a href = "{{ url_for('about_notebook_pro13')}}"> {{notebook}} <br> </a> </li>
+                    {% endif %}
+                    {% if price == 150000 and notebook == 'macbook pro 15' %}
+                       <li> <a href = "{{ url_for('about_notebook_pro15')}}"> {{notebook}} <br> </a></li>
+                    {% endif %}
+                    {% if price == 70000 and notebook == 'macbook air 13' %}
+                        <li><a href = "{{ url_for('about_notebook_air13')}}"> {{notebook}} <br> </a></li>
+                    {% endif %}
+                    {% if price == 100000 and notebook == 'macbook 12' %}
+                       <li> <a href = "{{ url_for('about_notebook_12')}}"> {{notebook}} <br> </a></li>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+     </nav>
+        </body>
 </html>
